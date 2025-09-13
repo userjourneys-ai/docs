@@ -1,0 +1,59 @@
+---
+title: "How It Works"
+description: "An overview of what we do and how."
+---
+<Steps>
+<Step title="Get connected">
+  Choose your integration and start streaming session replays.
+
+  <Columns cols={2}>
+    <Card title="PostHog (Stable)" icon="key" href="/setup/posthog">
+      Production‑ready and recommended for most teams.
+    </Card>
+    <Card title="Other sources (Alpha)" icon="beaker" href="/setup/sdk">
+      SDK, LogRocket, and Hotjar are in alpha — contact us to enable.
+    </Card>
+  </Columns>
+</Step>
+
+<Step title="AI identifies friction">
+  Our models watch your replays to find where users are confused, stuck or giving up. 
+  
+  For example:
+    - Long time spent on a page, modal, component
+    - Abandonments at critical steps (checkout, login, onboarding) and the why behind them
+    - Users getting stuck in navigation loops and dead-ends
+    - bugs and errors that block users from completing their journey
+  
+</Step>
+
+<Step title="Tickets are generated and prioritized">
+  Quickly identify the high impact issues.
+  | Title | Priority | Affected Users |
+  | --- | --- | --- |
+  | Onboarding search fails to find companies, users abandon | High | 77 |
+  | User can accidentally remove their own access | Medium | 2 |
+  | File upload failure shows a generic error | Low | 20 |
+
+</Step>
+
+<Step title="Double check the details">
+  Under each ticket you will find every replay where the issue occurred along with a more detailed description and reproduction steps.
+
+  <Tip>
+  Quickly scan the replay by clicking through the reproduction steps.
+  <img src="/images/timeline.png" alt="Create personal API key form showing project selection and access tabs" />
+  </Tip>
+</Step>
+
+<Step title="Triage the ticket">
+    if the issue is important and should be fixed, you can "Accept" it and optionally copy it to your project management tool. We also have a "Copy Prompt" button if you want to use AI to fix the issue immediately.
+    Otherwise, you can "Reject" it and the issue will be ignored.
+</Step>
+</Steps>
+
+<Tip>
+Check out the <a href="https://app.userjourneys.ai/demo" target="_blank" rel="noreferrer">live demo</a> to get a real feel for our app.
+</Tip>
+
+

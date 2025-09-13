@@ -1,0 +1,83 @@
+---
+title: "PostHog Integration"
+description: "Follow these steps to create and configure your PostHog API key with userjourneys.ai"
+sidebarTitle: "PostHog"
+---
+
+### Creating your API key
+
+
+<Steps>
+<Step title="Navigate to PostHog API settings">
+  Go to <a href="https://eu.posthog.com/settings/user-api-keys" target="_blank" rel="noreferrer">eu.posthog.com/settings/user-api-keys</a>.
+
+  <Tip>
+  If your project is in the US, change the URL prefix to <code>us.posthog.com</code>.
+  </Tip>
+</Step>
+
+<Step title="Click Create key">
+  Open the <strong>Personal API keys</strong> section and select <strong>Create personal API key</strong>.
+
+  <Frame caption="PostHog API Keys settings with Create personal API key button">
+  <img src="/images/posthog_create_key_1.jpg" alt="PostHog API Keys settings page showing the Create personal API key button" />
+  </Frame>
+</Step>
+
+<Step title="Fill in the form">
+  - Select <strong>Projects</strong>
+  - Choose the project you want to integrate
+
+  <Frame caption="Create personal API key form with project selection">
+  <img src="/images/posthog_project_selection_2.jpg" alt="Create personal API key form showing project selection and access tabs" />
+  </Frame>
+</Step>
+
+<Step title="Set access permissions">
+  Ensure the key has the following permissions:
+  - <strong>READ</strong> access: Person, Query, Session recording
+  - <strong>WRITE</strong> access: Action, Sharing configuration
+  <AccordionGroup>
+  <Accordion title="What do we do with this access?">
+    - <strong>READ • Person</strong>: Link session replays to users to analyze user journeys over time.
+    - <strong>READ • Query</strong>: Compute aggregates (affected users, first/last seen, paths) to prioritize tickets.
+    - <strong>READ • Session recording</strong>: Retrieve replays and their metadata.
+    - <strong>WRITE • Action</strong>: Create actions to automatically detect flows (e.g., onboarding). We use these to analyze issues at each step of a flow.
+    - <strong>WRITE • Sharing configuration</strong>: Generate shareable links to tickets and replay snippets for your team.
+  </Accordion>
+  </AccordionGroup>
+
+  <Frame caption="Required access permissions for the API key">
+  <img src="/images/posthog_access_3.jpg" alt="PostHog access settings showing read access for error tracking, person, query, session recording and write access for action and sharing configuration" />
+  </Frame>
+
+
+</Step>
+
+<Step title="Create and copy your API key">
+  Click <strong>Create key</strong> and paste it into the form in your [project settings](https://app.userjourneys.ai/settings).
+</Step>
+
+<Step title="Copy Project ID from URL">
+  Find your project ID in the URL. For example:
+
+  ```text
+  https://[eu/us].posthog.com/project/48510/settings/user-api-keys
+  ```
+
+  In this example, <code>48510</code> is the project ID. Copy your project ID into the form in your [project settings](https://app.userjourneys.ai/settings).
+</Step>
+
+<Step title="Test Connection">
+  Click <strong>Test Connection</strong> to verify everything works. Replays will begin streaming immediately.
+    <Frame>
+  <img src="/images/posthog_test_connection_success.png" alt="A successful test connection message" />
+</Frame>
+</Step>
+</Steps>
+
+<Check>
+You're all set
+</Check>
+
+
