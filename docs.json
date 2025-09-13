@@ -7,29 +7,19 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.ico",
   "navigation": {
-
-        "groups": [
-          {
-            "group": "Introduction",
-            "pages": [
-              "index",
-              "how-it-works"
-            ]
-          },
-          {
-            "group": "Setup",
-            "pages": [
-              "setup/posthog",
-              "setup/sdk",
-              "setup/logrocket",
-              "setup/hotjar"
-            ]
-          }
-        ],
-    "global": {
-    }
+    "groups": [
+      {
+        "group": "Introduction",
+        "pages": ["index", "how-it-works"]
+      },
+      {
+        "group": "Setup",
+        "pages": ["setup/posthog", "setup/sentry"]
+      }
+    ],
+    "global": {}
   },
   "logo": {
     "light": "/logo/light.svg",
@@ -39,18 +29,17 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:founders@userjourneys.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "href": "https://app.userjourneys.ai"
     }
   },
   "contextual": {
-    "options": [
-   ]
+    "options": []
   },
   "footer": {
     "socials": {

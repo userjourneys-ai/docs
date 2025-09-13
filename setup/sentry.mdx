@@ -1,0 +1,114 @@
+---
+title: "Sentry Integration"
+description: "Create a Sentry auth token, set required scopes, and configure Org, Project, and Instance URL in userjourneys.ai"
+sidebarTitle: "Sentry"
+---
+
+### Create your auth token and configure Sentry
+
+<Steps>
+<Step title="Open Sentry auth tokens">
+  Go to your Sentry auth tokens page.
+
+  <Tabs>
+  <Tab title="Sentry Cloud (sentry.io)">
+    <a href="https://sentry.io/settings/account/api/auth-tokens/" target="_blank" rel="noreferrer">sentry.io/settings/account/api/auth-tokens/</a>
+  </Tab>
+  <Tab title="Self-hosted">
+    Replace <code>YOUR_SENTRY_BASE_URL</code> with your instance domain:
+
+```text
+https://YOUR_SENTRY_BASE_URL/settings/account/api/auth-tokens/
+```
+
+  </Tab>
+  </Tabs>
+
+  <Info>
+  You create a personal auth token from your Sentry user account. It grants read access for this integration only.
+  </Info>
+</Step>
+
+<Step title="Create a new auth token with read scopes">
+  Click <strong>Create New Token</strong>, give it a descriptive name (e.g., <em>userjourneys-read</em>), and enable <strong>read</strong> permission on the following scopes:
+
+- Project
+- Issue & Event
+- Organization
+
+<AccordionGroup>
+    <Accordion title="Why these scopes are needed">
+    - <strong>READ • Project</strong>: Resolve project metadata for mapping issues and replays.
+    - <strong>READ • Issue & Event</strong>: Fetch issues and event details to enrich timelines.
+    - <strong>READ • Organization</strong>: Identify your org context and list projects safely.
+  </Accordion>
+  </AccordionGroup>
+</Step>
+
+<Step title="Copy and paste your auth token">
+  Copy the generated token and paste it into your [project settings](https://app.userjourneys.ai/settings).
+
+  <ParamField body="Sentry Auth Token" type="string" required>
+  Personal auth token with read scopes: Project, Issue & Event, Organization.
+  </ParamField>
+</Step>
+
+<Step title="Find your Sentry Organization ID (slug)">
+  Your Organization ID is the org <em>slug</em> shown in Sentry.
+
+- Go to <strong>Organization Settings</strong> in Sentry.
+- Copy the <strong>Organization slug</strong> (e.g., <code>acme-corp</code>).
+
+```text
+Example URL: https://sentry.io/organizations/acme-corp/
+Org ID (slug): acme-corp
+```
+
+Paste it into your [project settings](https://app.userjourneys.ai/settings).
+
+  <ParamField body="Sentry Org ID" type="string" required>
+  Your Sentry organization slug (e.g., <code>acme-corp</code>).
+  </ParamField>
+</Step>
+
+<Step title="Find your Sentry Project ID">
+  You can obtain the numeric Project ID from Project Settings.
+
+- In Sentry, open the target <strong>Project</strong>.
+- Go to <strong>Project Settings → General</strong> and locate the <strong>ID</strong> field.
+- Copy the numeric Project ID (not the slug).
+
+```text
+Project slug: web-frontend
+Project ID: 12345678
+```
+
+Paste it into your [project settings](https://app.userjourneys.ai/settings).
+
+{" "}
+
+<ParamField body="Sentry Project ID" type="string" required>
+  Numeric project identifier from Sentry (e.g., <code>12345678</code>).
+</ParamField>
+
+  <Tip>
+  If you only see a slug, open Project Settings → General. The numeric ID appears in the header section and in API examples.
+  </Tip>
+</Step>
+
+<Step title="Set your Sentry Instance URL (if self-hosted)">
+  If you use self-hosted Sentry, enter your base URL. If you use Sentry Cloud, leave this field empty and we default to <code>https://sentry.io</code>.
+
+```text
+Examples:
+SaaS (default): https://sentry.io
+Self-hosted:     https://sentry.acme.internal
+```
+
+  <ParamField body="Sentry Instance URL" type="string">
+  Base URL of your Sentry instance. Leave empty for Sentry Cloud.
+  </ParamField>
+</Step>
+</Steps>
+
+<Check>You're all set</Check>
