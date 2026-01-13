@@ -1,0 +1,73 @@
+---
+title: "Creating and Managing Experiments"
+description: "Set up interview experiments with custom questions, product context, and personalized greetings."
+---
+
+An experiment is a configured interview that you share with users. Each experiment has its own [questions](/interviews/questions), settings, and collected responses.
+
+## Required Fields
+
+### Experiment Name
+
+Internal identifier for your experiment. This is not shown to users—use it to organize your interviews.
+
+**Examples:** "Onboarding Feedback Q1", "Churn Exit Interview", "Power User Research"
+
+## Optional Fields
+
+### Product Context
+
+Background information about your product that helps the AI ask relevant follow-up questions. The more context you provide, the better the AI can probe for specifics.
+
+Include:
+- What your product does
+- Target audience
+- Key features
+- Pricing model
+- Common use cases
+
+<Tip>
+You can paste text directly or enter a URL to auto-extract product information from your website.
+</Tip>
+
+### First Message
+
+Customize how the AI greets users. Supports these placeholders:
+
+| Placeholder | Replaced With |
+|-------------|---------------|
+| `{name}` | Interviewer name |
+| `{product}` | Product name from project settings |
+| `{question}` | First interview question |
+
+**Example:**
+```
+Hey! I'm {name}. Thanks for joining—this will only take a few minutes. Let's start: {question}
+```
+
+### Interviewer Name
+
+What the AI introduces itself as. Defaults to "Alex" if not specified.
+
+### Interview Reward
+
+Text shown to users after they complete the interview. Use this for thank you messages or reward codes.
+
+**Example:**
+```
+Thanks for your feedback! Here's 20% off your next purchase: FEEDBACK20
+```
+
+## Managing Experiments
+
+| Action | Behavior |
+|--------|----------|
+| **Edit** | Changes apply to new interviews only. Existing responses aren't affected. |
+| **Pause** | Stop accepting new responses. Existing data remains accessible. |
+| **Delete** | Removes the experiment configuration. Interview data is preserved. |
+| **Copy Link** | Production URL for sharing with real users. |
+| **Copy Test Link** | Test mode URL that doesn't count toward usage limits. |
+
+<Warning>
+Editing an experiment doesn't retroactively change completed interviews. If you significantly change your questions, consider creating a new experiment instead.
+</Warning>

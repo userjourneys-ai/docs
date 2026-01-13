@@ -17,6 +17,19 @@
       {
         "group": "Setup",
         "pages": ["setup/posthog", "setup/sentry"]
+      },
+      {
+        "group": "Interviews",
+        "pages": [
+          "interviews/index",
+          "interviews/questions",
+          "interviews/experiments",
+          "interviews/insights",
+          "interviews/soundbites",
+          "interviews/quality",
+          "interviews/languages",
+          "interviews/troubleshooting"
+        ]
       }
     ],
     "global": {}
