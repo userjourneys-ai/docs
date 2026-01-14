@@ -1,0 +1,9 @@
+#sidebar,
+#sidebar-content {
+  scrollbar-gutter: auto !important;
+  overflow-x: hidden !important;
+}
+
+.stable-scrollbar-gutter {
+  scrollbar-gutter: auto !important;
+}
