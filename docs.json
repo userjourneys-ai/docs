@@ -11,12 +11,8 @@
   "navigation": {
     "groups": [
       {
-        "group": "Introduction",
-        "pages": ["index", "how-it-works"]
-      },
-      {
-        "group": "Setup",
-        "pages": ["setup/posthog", "setup/sentry"]
+        "group": "Getting Started",
+        "pages": ["index"]
       },
       {
         "group": "Interviews",
@@ -30,6 +26,10 @@
           "interviews/languages",
           "interviews/troubleshooting"
         ]
+      },
+      {
+        "group": "Funnels",
+        "pages": ["funnels/index", "funnels/posthog"]
       }
     ],
     "global": {}
