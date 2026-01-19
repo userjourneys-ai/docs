@@ -38,28 +38,21 @@ PostHog integration is required for the Visual Funnel Builder, available on the 
 </Step>
 
 <Step title="Set access permissions">
-  Ensure the key has the following permissions:
-  - <strong>READ</strong> access: Person, Query, Session recording
-  - <strong>WRITE</strong> access: Action, Sharing configuration
-  <AccordionGroup>
-  <Accordion title="What do we do with this access?">
-    - <strong>READ • Person</strong>: Link session replays to users to analyze user journeys over time.
-    - <strong>READ • Query</strong>: Compute aggregates (affected users, first/last seen, paths) to prioritize tickets.
-    - <strong>READ • Session recording</strong>: Retrieve replays and their metadata.
-    - <strong>WRITE • Action</strong>: Create actions to automatically detect flows (e.g., onboarding). We use these to analyze issues at each step of a flow.
-    - <strong>WRITE • Sharing configuration</strong>: Generate shareable links to tickets and replay snippets for your team.
-  </Accordion>
-  </AccordionGroup>
+  Select **MCP Server** from the Scopes dropdown.
 
-  <Frame caption="Required access permissions for the API key">
-  <img src="/images/posthog_access_3.jpg" alt="PostHog access settings showing read access for error tracking, person, query, session recording and write access for action and sharing configuration" />
+  <Frame caption="Select MCP Server from the Scopes dropdown">
+  <img src="/images/mcp_server.png" alt="PostHog Scopes dropdown with MCP Server selected" />
   </Frame>
 
+  Then add **WRITE** access for **Actions**.
 
+  <Frame caption="Add WRITE access for Actions">
+  <img src="/images/write_acces.png" alt="PostHog access settings showing write access for Actions" />
+  </Frame>
 </Step>
 
 <Step title="Create and copy your API key">
-  Click <strong>Create key</strong> and paste it into the form in your [project settings](https://app.userjourneys.ai/settings).
+  Click <strong>Create key</strong> and paste it into the form in your [project settings](https://app.userjourneys.ai/settings?tab=setup).
 </Step>
 
 <Step title="Copy Project ID from URL">
@@ -69,7 +62,7 @@ PostHog integration is required for the Visual Funnel Builder, available on the 
   https://[eu/us].posthog.com/project/48510/settings/user-api-keys
   ```
 
-  In this example, <code>48510</code> is the project ID. Copy your project ID into the form in your [project settings](https://app.userjourneys.ai/settings).
+  In this example, <code>48510</code> is the project ID. Copy your project ID into the form in your [project settings](https://app.userjourneys.ai/settings?tab=setup).
 </Step>
 
 <Step title="Test Connection">
